@@ -179,8 +179,7 @@ void main(int argc, char* argv[])
     if (RecvReply()) {
         if (nReplyCode == 230 || nReplyCode == 331) {
             cout<<ReplyMsg;
-        } else
-        {
+        } else {
             cout<<"USER response error!"<<endl;
             closesocket(SocketControl);
             return;
@@ -198,8 +197,7 @@ void main(int argc, char* argv[])
             if (CmdBuf[i] == '\r') {
                 CmdBuf[i] = '\0';
                 break;
-            } else
-            {
+            } else {
                 cout<<'*';
             }
         }
@@ -215,8 +213,7 @@ void main(int argc, char* argv[])
         if (RecvReply()) {
             if (nReplyCode == 230) {
                 cout<<ReplyMsg;
-            } else
-            {
+            } else {
                 cout<<"PASS response error!"<<endl;
                 closesocket(SocketControl);
                 return;
@@ -243,8 +240,7 @@ void main(int argc, char* argv[])
     if (RecvReply()) {
         if (nReplyCode == 125 || nReplyCode == 150 || nReplyCode == 226) {
             cout<<ReplyMsg;
-        } else
-        {
+        } else {
             cout<<"LIST response error!"<<endl;
             closesocket(SocketControl);
             return;
@@ -273,8 +269,7 @@ void main(int argc, char* argv[])
     if (RecvReply()) {
         if (nReplyCode == 226) {
             cout<<ReplyMsg;
-        } else
-        {
+        } else {
             cout<<"LIST response error!"<<endl;
             closesocket(SocketControl);
             return;
